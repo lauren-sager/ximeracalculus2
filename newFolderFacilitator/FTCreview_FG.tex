@@ -1,0 +1,118 @@
+\documentclass{ximera}
+
+\title{Fundamental Theorem of Calculus Review Activity Facilitator Guide}
+\author{MATH 426: Calculus II}
+
+\begin{document}
+\begin{abstract}
+   Working with the peers in your group, solve the following problems. Make sure to show and justify all your work. Make sure everyone in the group understands the solution and participates. Be prepared to report your answers to the whole class. 
+\end{abstract}
+\maketitle
+
+\textbf{Student Learning Outcomes}
+Students will be able to:
+    \begin{itemize}
+        \item Compute the value of a simple linear integral using geometric methods.
+        \item Compute the value of a simple linear integral using the power rule for integration.
+        \item Compute the value of a simple lnear integral using the limit of a Riemann sum approximation.
+        \item Compare answers using the three methods and check for agreement.
+    \end{itemize}
+\textbf{Prerequisite Knowledge:} Students should should be aware of the notation for definite integrals, and you will need to recall the power rule for integration. The technical details surrounding the area approximation are given in the handout, but you will need to use algebraic properties of limits and summation notation to manipulate the approximation and show agreement between the integral formula and the limit of the area approximations.\\
+\textbf{Helpful formulas and summation properties to have on hand:} Students should be encouraged to use their notes or textbook to find these formulas (as a study skills/fact seeking exercise), but here they are for your use: \\
+\textcolor{orange}{
+$\displaystyle\sum_{j=1}^n(a_j+b_j)=\sum_{j=1}^n a_j+\sum_{j=1}^n b_j$\\
+
+$\displaystyle \sum_{j=1}^n ca_j=c\sum_{j=1}^n a_j$, $c$ is any constant\\
+
+$\displaystyle \sum_{j=1}^n c=cn$, $c$ is any constant and $n\geq 1$\\
+$\displaystyle \sum_{j=1}^n j=\frac{n(n+1)}{2}$\\
+
+$\displaystyle \sum_{j=1}^n j^2 =\frac{n(n+1)(2n+1)}{6}$\\
+
+Power rule for integration: $\displaystyle\int x^ndx=\frac{x^{n+1}}{n+1}+c$, when $n\neq -1$\\
+
+}
+
+In Calculus I students are typically introduced to the integral operation. This introduction involves studying area approximations built from special families of rectangles. In this activity you will analyze a few functions where we can show perfect agreement between the limits of Riemann sums and the values of integrals. The hope is that these calculations will help anchor the definition of the integral with some tangible evidence. This particular activity plays a role similar to the limit definition of the derivative. It is a piece of mathematics which we work through to improve understanding and deepen our appreciation for the calculus rules which help us avoid the technical complexity of Riemann sums.
+
+\begin{comment}
+    Suppose that $p(n)$ and $q(n)$ are polynomial functions. If you encounter a limit of the form:
+\begin{align}
+	\lim_{n\rightarrow \infty} \frac{p(n)}{q(n)} \nonumber
+\end{align}
+which evaluates to an indeterminate form (e.g. $\frac{\infty}{\infty})$) you may be able to remove the uncertainty by dividing the numerator and denominator by a well chosen function. In the case of $p, q$ both polynomial, try dividing the numerator and denominator by the largest power of $n$ appearing (anywhere). If you do this carefully, you may be able to evaluate the limit. (If you have any difficulties trying this out you can ask your TA or LA for assistance).
+\end{comment}
+
+\begin{exercise}
+In this exercise you will show agreement between the Riemann definition of the integral and the power rule in a few simple cases. 
+\begin{align}
+	\sum_{j=1}^n f(x^*_{j})\Delta x_{j} \rightarrow \int_{a}^b f(x) dx \nonumber
+\end{align}
+
+Consider the definite integral below:
+\begin{align}
+	\int_{0}^2 x dx \nonumber
+\end{align}
+Your group will determine the value of this integral in 3 ways.\\
+First, sketch a graph of the integrand on the domain of integration and shade the area you think this integral represents. When your group is in agreement over the picture, apply high-school geometry formulae to deduce the area.\\
+\textcolor{blue}{The area is a triangle with sides $y=x$, the $x$-axis and $x=2$, which has base 2 and height 2: \\
+$A=\frac{1}{2}(2)(2)=2$}
+\end{exercise}
+
+\begin{exercise}
+    Second, recall (or look-up depending on the freshness of your memories) the FTC and the power rule for integration. Compute the value of the definite integral using these formulas. (Your first two answers should agree perfectly.)\\
+    \textcolor{blue}{$\displaystyle\int_0^2 xdx=\frac{x^2}{2}\bigg|_{x=0}^{x=2}=\frac{2^2}{2}-\frac{0^2}{2}=2$}
+\end{exercise}
+
+\begin{exercise}
+    Third, Work out the value of the area using the following limit of a Riemann Sum:
+\begin{align}
+	\int_{0}^2 x dx = \lim_{n\rightarrow \infty} \sum_{j=1}^n (a + j\Delta x)\Delta x \nonumber
+\end{align}
+    (This formula is an example of the `right-point' rule with uniform width rectangles.)\\
+    \begin{enumerate}
+        \item Recall that $a$, $b$ represent the endpoints of integration and $\Delta x$ is the width of each rectangle.  If you are struggling to determine these values, ask your TA or LA. Substitute and simplify into the Riemann sum formula above. (Since $f(x)=x$ for this intro example it may seem to disappear in the sum, but you need to use the formula for $f$ in more complicated examples.)\\
+        \textcolor{blue}{In this case, $a=0$, $b=2$ and $\Delta x=\frac{b-a}{n}=\frac{2}{n}$.\\
+$\displaystyle\lim_{n\rightarrow \infty}\sum_{j=1}^{n}(0+j(\frac2n))\frac{2}{n}=\lim_{n\rightarrow \infty}\sum_{j=1}^n j(\frac{4}{n^2})=\lim_{n\rightarrow \infty}\frac{4}{n^2}\sum_{j=1}^n j$}
+        
+        \item Once you have simplified your Riemann sum, we will want a way to determine its total value without using summation notation. Use the formulas and properties of sums to convert the summation into something else (that doesn't involve summation notation).\\
+        \textcolor{blue}{$\displaystyle \lim_{n\rightarrow \infty}\frac{4}{n^2}\sum_{j=1}^n j=\lim_{n\rightarrow \infty} \frac{4}{n^2}(\frac{n(n+1)}{2})$}\\
+        \textcolor{orange}{Students tend to find these somewhat imprecise scaffold parts frustrating sometimes.  Remind students that as long as they are following the correct steps and get there eventually, it doesn't really matter where they do the steps.}
+        
+        \item Finally, you must evaluate the limit, there are several different ways to do this correctly, you can try the renormalization idea or follow your TA/LA's suggestions.\\
+        \textcolor{blue}{$\displaystyle\lim_{n\rightarrow \infty} \frac{4}{n^2}(\frac{n(n+1)}{2})\frac{4}{n^2}(\frac{n(n+1)}{2})=\lim_{n\rightarrow \infty} \frac{2n^2+2n}{n^2}=\lim_{n\rightarrow \infty}\frac{\frac{2n^2}{n^2}+\frac{2n}{n^2}}{\frac{n^2}{n^2}}$}\\
+        \textcolor{orange}{Generally, students are allowed to argue about what is happening with polynomial/polynomial with powers as well, as long as they can correctly explain the rule to us.  If you're not sure if this is acceptable or not in your situation, ask your instructor about their policy.}
+
+
+        \item Simplify and check that your limit evaluates to exactly the same value as your first two evaluations.\\
+        \textcolor{blue}{$\displaystyle\lim_{n\rightarrow \infty} \frac{4}{n^2}(\frac{n(n+1)}{2})=2$, which agrees with the previous two methods.}
+
+        \textit{(If your group wants a greater challenge you can try working with the left-point rule and the mid-point rule which are detailed in section 5.1 of the textbook. Using the different rules will change the calculations, but the final result should be the same. One of the most technically interesting aspects of the Riemann integral is how the value of the integral is independent of the specific choice of approximation used.)}
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}    
+    Choose a new function $f(x) = C_{1}x + C_{2}$ and new limits of integration $a$ and $b$. (\textit{You can choose these constants however you wish, but if you choose them all to be positive the problem will be easier because your group won't have to worry about distinguishing between net area and geometric area.})\\
+
+    Repeat the steps from the guided example to show that the limit of the Riemann sum approximation is equal to the area computed using geometry, and the shortcut provided by the power rule for integration.\\
+
+\begin{align}
+	\int_{a}^b f(x) dx = \lim_{n\rightarrow \infty} \sum_{j=1}^n f(a + j\Delta x) \Delta x \nonumber
+\end{align}
+
+\textcolor{blue}{$\displaystyle\int_{a}^b f(x) dx = \lim_{n\rightarrow \infty} \sum_{i=1}^n f(a + i\Delta x) \Delta x$\\
+$\displaystyle=\lim_{n\rightarrow \infty} \sum_{j=1}^n \big(C_1(a+j(\frac{b-a}{n}))+C_2\big)(\frac{b-a}{n})$\\
+$\displaystyle =\lim_{n\rightarrow \infty} \sum_{j=1}^n \big(C_1a+C_1j(\frac{b-a}{n})\big)(\frac{b-a}{n})+C_2\big(\frac{b-a}{n})$\\
+$\displaystyle=\lim_{n\rightarrow \infty} \sum_{j=1}^n C_1j(\frac{b-a}{n})^2+\sum_{j=1}^n(C_2+C_1a)(\frac{b-a}{n})$\\
+$\displaystyle=\lim_{n\rightarrow \infty} C_1(\frac{(b-a)^2}{n^2})\sum_{j=1}^n j+\sum_{j=1}^n(C_2+C_1a)(\frac{b-a}{n})$\\
+$\displaystyle=\lim_{n\rightarrow \infty} C_1(\frac{(b-a)^2}{n^2})\bigg(\frac{n(n+1)}{2}\bigg)+n(C_2+C_1a)(\frac{b-a}{n})$\\
+$\displaystyle=\lim_{n\rightarrow \infty} \bigg(\frac{C_1(b-a)^2(n+1)}{2n}\bigg)+(C_2+C_1a)(b-a)$\\
+$\displaystyle =\frac{C_1(b-a)^2}{2}+(C_2+C_1a)(b-a)$\\
+Check your own work for the power rule for integration and geometric area by making sure all three answers are the same!}
+\end{exercise}
+
+
+
+
+
+\end{document}
