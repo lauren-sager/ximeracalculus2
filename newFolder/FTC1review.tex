@@ -1,0 +1,56 @@
+\documentclass{ximera}
+
+\title{Fundamental Theorem of Calculus 1 Review Activity}
+\author{MATH 426: Calculus II}
+
+\begin{document}
+\begin{abstract}
+   Working with the peers in your group, solve the following problems. Make sure to show and justify all your work. Make sure everyone in the group understands the solution and participates. Be prepared to report your answers to the whole class. 
+\end{abstract}
+\maketitle
+
+\begin{exercise}
+    Consider each of the expressions below. Discuss the expressions and decide if the expressions can be simplified or evaluated in general. (Some of these are subtle.) Check your results with your TA/LA. In each expression $a$ is used to represent a constant parameter.
+    \begin{enumerate}
+        \item \begin{align}	\frac{d}{dx} \int_{x}^a f(t)dt \nonumber\end{align}
+        \item \begin{align}	\frac{d}{dt} \int_{a}^t f(x)dx \nonumber\end{align}
+        \item \begin{align}	\frac{d}{dx} \int_{a}^t f(x)dx \nonumber\end{align}
+        \item \begin{align}	\frac{d}{dx}\left[ \int_{a}^x f(t)dt +  \int_{x}^b f(t)dt\right] \nonumber\end{align}
+        \item \begin{align}   \frac{d}{dx} \int_{a}^{2e^x} f(t)d \nonumber t\end{align}
+        \item\begin{align}	\int_{a}^b f'(x)dx \nonumber\end{align}
+        \item\begin{align}	\int_{a}^b \frac{d^2f}{dx^2}dx \nonumber\end{align}
+        \item\begin{align}	\int_{a}^b f(x) dx \nonumber\end{align}
+\end{exercise}
+
+\begin{exercise}
+    As a group, create a list of a few functions that we know the derivatives of and their derivatives.  (Or if you have already done an activity where you made such a list, reference that.)  Take your first list and make a list of integrals (both definite and indefinite) that we can integrate perfectly.
+\end{exercise}
+
+\begin{exercise}
+    Create at least one example with your group of a function which `looks' simple, but doesn't seem to be easy to integrate. (Yet.)
+\end{exercise}
+
+\begin{exercise}
+    Suppose that the velocity of a particle is given by $v(t)=t^4-5t^3+6t^2$.  Find 
+    \begin{enumerate}
+        \item The displacement of the particle from time $t=0$ to $t=3$.
+        \item The displacement of the particle from time $t=2$ to $t=3$.
+        \item The total distance traveled by the particle from time $t=0$ to $t=3$.
+        \item The total distance traveled by the particle from time $t=2$ to $t=3$.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    The rate of natural gas consumption, $R(t)$ of several mid-Atlantic states (NY, NJ, PA) is given in the table and graph below.  Express the total quantity of natural gas consumed in 2009 as an integral (with respect to time, $t$, in days).  Then estimate this quantity.  \\
+    \begin{tabular}{c|c|c|c|c|c|c|c|c|c|c|c|c}
+        Month  & Jan & Feb & Mar & Apr & May & Jun & Jul & Aug & Sep & Oct & Nov & Dec   \\ \hline
+        Avg R(t) & 3.18 & 2.86 & 2.39 & 1.49 & 1.08 & 0.80 & 1.01 & 0.89 & 0.89 & 1.20 & 1.64 & 2.52 
+    \end{tabular}
+    \begin{image}
+    \includegraphics{}
+    \end{image}
+    
+    (Remember to take into account that months have different numbers of days).  Problem from Rogaswki et al., \textit{Calculus: Early Transcendentals}, 4th Ed.
+\end{exercise}
+
+\end{document}
