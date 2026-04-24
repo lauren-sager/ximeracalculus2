@@ -1,0 +1,116 @@
+\documentclass{ximera}
+
+\title{Fundamental Theorem of Calculus 1 Review Activity Facilitator Guide}
+\author{MATH 426: Calculus II}
+
+\begin{document}
+\begin{abstract}
+   Working with the peers in your group, solve the following problems. Make sure to show and justify all your work. Make sure everyone in the group understands the solution and participates. Be prepared to report your answers to the whole class. 
+\end{abstract}
+\maketitle
+
+\textbf{Student Learning Objectives}\\
+Students should be able to:
+\begin{itemize}
+    \item Simplify expressions involving definite integrals using the operational versions of the FTC.
+    \item Identify how derivatives and integrals interact in expressions involving definite integrals and derivatives.
+    \item Use integrals or approximations of area to  solve applied problems.
+\end{itemize}
+
+\textbf{Prerequisite Knowledge:} Students should be familiar with the notation for definite and indefinite integrals, and should have a basic awareness of the Fundamental Theorem of Calculus. The better students remember derivatives the more helpful the activity will be.\\
+
+This activity is likely a bit long for most students.  Help groups decide what is most important for them to practice.  It may be that some groups feel very solid with the FTC, and can benefit from applying this knowledge.  These groups should start with the word problems, and return to problems 1-3 afterwards.  Groups that are struggling with the FTC or integration should start from the beginning, and may not get to problems 4-5 in class.  
+
+The fundamental theorem of calculus is one of the central results of calculus. This activity gives you the opportunity to explore some of the consequences of the fundamental theorem of calculus. Answering the questions in this activity carefully will give you a good foundation for learning the more complicated techniques for integration as many of the results here can be used as ingredients or components of those techniques.\\
+
+The operational formulation of the fundamental theorem of calculus is better than the standard textbook formulation for this activity. The two parts of the theorem written in compact symbolic notation are included below:
+
+If $f(t)$is differentiable on $[a,b]$ then both of the following equations hold:
+
+\begin{itemize}
+\item \begin{align}
+	\int_{a}^b\frac{d}{dx}f(x)dx  = f(b)-f(a). \nonumber\end{align}
+\item \begin{align}
+	\frac{d}{dx}\int_{a}^x f(t)dt = f(x), \text{ while } x \in [a,b] \nonumber\end{align}
+\end{itemize}
+
+\begin{exercise}
+    Consider each of the expressions below. Discuss the expressions and decide if the expressions can be simplified or evaluated in general. (Some of these are subtle.) Check your results with your TA/LA. In each expression $a$ is used to represent a constant parameter.
+    \begin{enumerate}
+        \item \begin{align}	\frac{d}{dx} \int_{x}^a f(t)dt \nonumber\end{align}
+        \textcolor{blue}{ $=-\frac{d}{dx}\int_{a}^x f(t)dt=-f(x)$}
+
+        \item \begin{align}	\frac{d}{dt} \int_{a}^t f(x)dx \nonumber\end{align}
+        \textcolor{blue}{ $=f(t)$ (note that the $x$ and $t$ are just swapped, otherwise this function fits the form of the FTC II.)}
+
+        \item \begin{align}	\frac{d}{dx} \int_{a}^t f(x)dx \nonumber\end{align}
+        \textcolor{blue}{ $=0$ (this entire integral is constant with respect to $x$, FTC I, so the derivative is 0.)} 
+
+        \item \begin{align}	\frac{d}{dx}\left[ \int_{a}^x f(t)dt +  \int_{x}^b f(t)dt\right] \nonumber\end{align}
+        \textcolor{blue}{ $=\frac{d}{dx}\bigg[\int_a^x f(x)dx-\int_b^x f(t)dt\bigg]=f(x)-f(x)=0$ (why might this be true?  Think about the area that would represent.)}
+
+        \item \begin{align}   \frac{d}{dx} \int_{a}^{2e^x} f(t)d \nonumber t\end{align}
+        \textcolor{blue}{ $=(2e^x)f(2e^{x})$}
+
+        \item\begin{align}	\int_{a}^b f'(x)dx \nonumber\end{align}
+        \textcolor{blue}{ $=f(b)-f(a)$}
+
+        \item\begin{align}	\int_{a}^b \frac{d^2f}{dx^2}dx \nonumber\end{align}
+        \textcolor{blue}{ $=\frac{df}{dx}|_{x=b}-\frac{df}{dx}|_{x=a}$}
+        \item\begin{align}	\int_{a}^b f(x) dx \nonumber\end{align}
+        \textcolor{blue}{ $=F(b)-F(a)$ where $F$ is the antiderivative of $f$.}
+
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    As a group, create a list of a few functions that we know the derivatives of and their derivatives.  (Or if you have already done an activity where you made such a list, reference that.)  Take your first list and make a list of integrals (both definite and indefinite) that we can integrate perfectly.\\
+    \textcolor{blue}{ There are many examples here. Use the first recitation worksheet to check your work and/or get ideas.}
+\end{exercise}
+
+\begin{exercise}
+    Create at least one example with your group of a function which `looks' simple, but doesn't seem to be easy to integrate. (Yet.)
+    \textcolor{blue}{ $\int_a^b \tan(x)dx$ is one such example. There are also many here! }
+
+\end{exercise}
+
+\begin{exercise}
+    Suppose that the velocity of a particle is given by $v(t)=t^4-5t^3+6t^2$.  Find 
+    \begin{enumerate}
+        \item The displacement of the particle from time $t=0$ to $t=3$.\\
+        \textcolor{blue}{ $\int_0^3 (t^4-5t^3+6t^2)dt=\frac{t^5}{5}-\frac{5}{4}t^4+2t^3\bigg|_{0}^{3}=\frac{3^5}{5}-\frac{5}{4}3^4+2(3^3)-(\frac{0^5}{5}-\frac{5}{4}0^4+2(0^3)=1.35 m$}
+        
+        \item The displacement of the particle from time $t=2$ to $t=3$.\\
+        \textcolor{blue}{ $\int_2^3 (t^4-5t^3+6t^2)dt=\frac{t^5}{5}-\frac{5}{4}t^4+2t^3\bigg|_{2}^{3}$\\
+        $=\frac{3^5}{5}-\frac{5}{4}(3^4)+2(3^3)-(\frac{2^5}{5}-\frac{5}{4}(2^4)+2(2^3))=-1.05 m$}
+        
+        \item The total distance traveled by the particle from time $t=0$ to $t=3$.\\
+        \textcolor{blue}{ $=\int_0^2 (t^4-5t^3+6t^2)dt+\int_2^3-(t^4-5t^3+6t^2)dt$\\
+        $=\frac{t^5}{5}-\frac{5}{4}t^4+2t^3\bigg|_{0}^{2}-(\frac{t^5}{5}-\frac{5}{4}t^4+2t^3)\bigg|_{2}^{3}$\\
+        $=\frac{2^5}{5}-\frac{5}{4}(2^4)+2(2^3)-0-\bigg[(\frac{3^5}{5}-\frac{5}{4}(3^4)+2(3^3)-(\frac{2^5}{5}-\frac{5}{4}(2^4)+2(2^3))\bigg]=3.65m$\\}
+        \textcolor{orange}{I didn't include the absolute values in my solution, but that is what is happening here.  Suggesting that students may need to break up the area might be enough to get some groups unstuck on a problem like this.}
+        \item The total distance traveled by the particle from time $t=2$ to $t=3$.
+        \textcolor{blue}{ $\int_2^3 -(t^4-5t^3+6t^2)dt=-(\frac{t^5}{5}-\frac{5}{4}t^4+2t^3)\bigg|_{2}^{3}$\\
+        $=-(\frac{3^5}{5}-\frac{5}{4}(3^4)+2(3^3))+(\frac{2^5}{5}-\frac{5}{4}(2^4)+2(2^3))=1.05 m$}
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    The rate of natural gas consumption, $R(t)$ of several mid-Atlantic states (NY, NJ, PA) is given in the table and graph below.  Express the total quantity of natural gas consumed in 2009 as an integral (with respect to time, $t$, in days).  Then estimate this quantity.  \\
+    \begin{tabular}{c|c|c|c|c|c|c|c|c|c|c|c|c}
+        Month  & Jan & Feb & Mar & Apr & May & Jun & Jul & Aug & Sep & Oct & Nov & Dec   \\ \hline
+        Avg R(t) & 3.18 & 2.86 & 2.39 & 1.49 & 1.08 & 0.80 & 1.01 & 0.89 & 0.89 & 1.20 & 1.64 & 2.52 
+    \end{tabular}
+    \begin{image}
+    \includegraphics{FTC1review.png}
+    \end{image}
+    \xmalt{Graph of natural gas consumption vs. month with the data in the table conntected in a piecewise fashion to create a continuous graph.}
+    
+    (Remember to take into account that months have different numbers of days).  Problem from Rogaswki et al., \textit{Calculus: Early Transcendentals}, 4th Ed.\\
+    \textcolor{blue}{ Natural gas consumed: $\int_0^{365} R(t)dt$\\
+    Approximation: $3.18(31)+2.86(28)+2.39(31)+1.49(30)+1.08(31)+0.80(30)+1.01(31)+0.89(31)+0.89(30)+1.20(31)+1.64(30)+2.52(31)$\\
+    $=605.05x10^6\,\, ft^3$}
+    \textcolor{orange}{This problem is a little more back on the idea of approximating the integral, so it doesn't exactly follow the FTC flavor of the rest of the activity.  This activity can be thought of a more of a ``challenge'' problem for groups who are very comfortable with the FTC.}
+\end{exercise}
+
+\end{document}

@@ -1,6 +1,6 @@
 \documentclass{ximera}
 
-\title{Fundamental Theorem of Calculus 1 Review Activity}
+\title{Fundamental Theorem of Calculus 1 Review Activity Solution Guide}
 \author{MATH 426: Calculus II}
 
 \begin{document}
@@ -26,31 +26,59 @@ If $f(t)$is differentiable on $[a,b]$ then both of the following equations hold:
     Consider each of the expressions below. Discuss the expressions and decide if the expressions can be simplified or evaluated in general. (Some of these are subtle.) Check your results with your TA/LA. In each expression $a$ is used to represent a constant parameter.
     \begin{enumerate}
         \item \begin{align}	\frac{d}{dx} \int_{x}^a f(t)dt \nonumber\end{align}
+        \textcolor{blue}{ $=-\frac{d}{dx}\int_{a}^x f(t)dt=-f(x)$}
+
         \item \begin{align}	\frac{d}{dt} \int_{a}^t f(x)dx \nonumber\end{align}
+        \textcolor{blue}{ $=f(t)$ (note that the $x$ and $t$ are just swapped, otherwise this function fits the form of the FTC II.)}
+
         \item \begin{align}	\frac{d}{dx} \int_{a}^t f(x)dx \nonumber\end{align}
+        \textcolor{blue}{ $=0$ (this entire integral is constant with respect to $x$, FTC I, so the derivative is 0.)} 
+
         \item \begin{align}	\frac{d}{dx}\left[ \int_{a}^x f(t)dt +  \int_{x}^b f(t)dt\right] \nonumber\end{align}
+        \textcolor{blue}{ $=\frac{d}{dx}\bigg[\int_a^x f(x)dx-\int_b^x f(t)dt\bigg]=f(x)-f(x)=0$ (why might this be true?  Think about the area that would represent.)}
+
         \item \begin{align}   \frac{d}{dx} \int_{a}^{2e^x} f(t)d \nonumber t\end{align}
+        \textcolor{blue}{ $=(2e^x)f(2e^{x})$}
+
         \item\begin{align}	\int_{a}^b f'(x)dx \nonumber\end{align}
+        \textcolor{blue}{ $=f(b)-f(a)$}
+
         \item\begin{align}	\int_{a}^b \frac{d^2f}{dx^2}dx \nonumber\end{align}
+        \textcolor{blue}{ $=\frac{df}{dx}|_{x=b}-\frac{df}{dx}|_{x=a}$}
         \item\begin{align}	\int_{a}^b f(x) dx \nonumber\end{align}
+        \textcolor{blue}{ $=F(b)-F(a)$ where $F$ is the antiderivative of $f$.}
+
     \end{enumerate}
 \end{exercise}
 
 \begin{exercise}
-    As a group, create a list of a few functions that we know the derivatives of and their derivatives.  (Or if you have already done an activity where you made such a list, reference that.)  Take your first list and make a list of integrals (both definite and indefinite) that we can integrate perfectly.
+    As a group, create a list of a few functions that we know the derivatives of and their derivatives.  (Or if you have already done an activity where you made such a list, reference that.)  Take your first list and make a list of integrals (both definite and indefinite) that we can integrate perfectly.\\
+    \textcolor{blue}{ There are many examples here. Use the first recitation worksheet to check your work and/or get ideas.}
 \end{exercise}
 
 \begin{exercise}
     Create at least one example with your group of a function which `looks' simple, but doesn't seem to be easy to integrate. (Yet.)
+    \textcolor{blue}{ $\int_a^b \tan(x)dx$ is one such example. There are also many here! }
+
 \end{exercise}
 
 \begin{exercise}
     Suppose that the velocity of a particle is given by $v(t)=t^4-5t^3+6t^2$.  Find 
     \begin{enumerate}
-        \item The displacement of the particle from time $t=0$ to $t=3$.
-        \item The displacement of the particle from time $t=2$ to $t=3$.
-        \item The total distance traveled by the particle from time $t=0$ to $t=3$.
+        \item The displacement of the particle from time $t=0$ to $t=3$.\\
+        \textcolor{blue}{ $\int_0^3 (t^4-5t^3+6t^2)dt=\frac{t^5}{5}-\frac{5}{4}t^4+2t^3\bigg|_{0}^{3}=\frac{3^5}{5}-\frac{5}{4}3^4+2(3^3)-(\frac{0^5}{5}-\frac{5}{4}0^4+2(0^3)=1.35 m$}
+        
+        \item The displacement of the particle from time $t=2$ to $t=3$.\\
+        \textcolor{blue}{ $\int_2^3 (t^4-5t^3+6t^2)dt=\frac{t^5}{5}-\frac{5}{4}t^4+2t^3\bigg|_{2}^{3}$\\
+        $=\frac{3^5}{5}-\frac{5}{4}(3^4)+2(3^3)-(\frac{2^5}{5}-\frac{5}{4}(2^4)+2(2^3))=-1.05 m$}
+        
+        \item The total distance traveled by the particle from time $t=0$ to $t=3$.\\
+        \textcolor{blue}{ $=\int_0^2 (t^4-5t^3+6t^2)dt+\int_2^3-(t^4-5t^3+6t^2)dt$\\
+        $=\frac{t^5}{5}-\frac{5}{4}t^4+2t^3\bigg|_{0}^{2}-(\frac{t^5}{5}-\frac{5}{4}t^4+2t^3)\bigg|_{2}^{3}$\\
+        $=\frac{2^5}{5}-\frac{5}{4}(2^4)+2(2^3)-0-\bigg[(\frac{3^5}{5}-\frac{5}{4}(3^4)+2(3^3)-(\frac{2^5}{5}-\frac{5}{4}(2^4)+2(2^3))\bigg]=3.65m$\\}
         \item The total distance traveled by the particle from time $t=2$ to $t=3$.
+        \textcolor{blue}{ $\int_2^3 -(t^4-5t^3+6t^2)dt=-(\frac{t^5}{5}-\frac{5}{4}t^4+2t^3)\bigg|_{2}^{3}$\\
+        $=-(\frac{3^5}{5}-\frac{5}{4}(3^4)+2(3^3))+(\frac{2^5}{5}-\frac{5}{4}(2^4)+2(2^3))=1.05 m$}
     \end{enumerate}
 \end{exercise}
 
@@ -65,7 +93,10 @@ If $f(t)$is differentiable on $[a,b]$ then both of the following equations hold:
     \end{image}
     \xmalt{Graph of natural gas consumption vs. month with the data in the table conntected in a piecewise fashion to create a continuous graph.}
     
-    (Remember to take into account that months have different numbers of days).  Problem from Rogaswki et al., \textit{Calculus: Early Transcendentals}, 4th Ed.
+    (Remember to take into account that months have different numbers of days).  Problem from Rogaswki et al., \textit{Calculus: Early Transcendentals}, 4th Ed.\\
+    \textcolor{blue}{ Natural gas consumed: $\int_0^{365} R(t)dt$\\
+    Approximation: $3.18(31)+2.86(28)+2.39(31)+1.49(30)+1.08(31)+0.80(30)+1.01(31)+0.89(31)+0.89(30)+1.20(31)+1.64(30)+2.52(31)$\\
+    $=605.05x10^6\,\, ft^3$}
 \end{exercise}
 
 \end{document}
