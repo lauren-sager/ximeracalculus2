@@ -1,0 +1,124 @@
+\documentclass{ximera}
+
+\title{$u$-Substitution Activity Solution Guide}
+\author{MATH 426: Calculus II}
+
+\begin{document}
+\begin{abstract}
+   Working with the peers in your group, solve the following problems. Make sure to show and justify all your work. Make sure everyone in the group understands the solution and participates. Be prepared to report your answers to the whole class. 
+\end{abstract}
+\maketitle
+
+The $u$-substitution technique is based on combining the fundamental theorem of calculus with the chain rule pattern of differentiation. The exercise here attempts to make the connection as clear as possible by using simple cooked examples. Our use of notation is different from most texts, and the exercises can refine your understanding of $u$-substitution if you work through them carefully.\\
+
+The preliminary example is intended to setup a situation where you can {\bf{understand}} the equality of the `change of variables theorem' written symbolically below:
+\begin{align}
+	\int_{a}^b F'(u(x))\frac{du}{dx} dx = \int_{u(a)}^{u(b)} F'(u)du \nonumber
+\end{align}
+(When we write the change of variables in this form, hopefully you will notice that there are changes to the limits of integration. If you are aware of that change, then you may realize that `cancelling the $dx$' doesn't fully account for what is happening. PSA: Stop notational abuse.)
+
+\begin{exercise}
+ With your group re-order the numbers: 2,3,5,7 in some way. 
+
+Take your new ordered set of numbers and substitute them into the boxes of the following expression:
+\[(\Box x^\Box +\Box)^\Box\]
+\textcolor{blue}{ For example, we will use $(2x^3+5)^7$. If your group chose a different arrangement, focus on the patterns at play here.  }
+
+    \begin{enumerate}
+        
+        \item Carefully use the rules of differentiation to take the derivative of this expression with respect to $x$. Write out an equation representing the operation you just performed in the following way:
+            \begin{align}
+	            \frac{d}{dx}\left[ \text{your function}\right] = \text{your derivative} \nonumber
+            \end{align}
+        \textcolor{blue}{$\frac{d}{dx}\left((2x^3+5)^7\right)=7(2x^3+5)^6(6x^2)$}
+
+        \item Create a definite integral with {\bf{your derivative}} as the integrand. (You can pick numbers for $a$ and $b$). \\
+        \textcolor{blue}{$\int_0^1 7(2x^3+5)^6(6x^2)dx$}
+
+        \item Next you are going to evaluate your integral {\bf{three times}} and verify the values are the same.
+            \begin{enumerate}
+                \item Use your knowledge of the origin of this integrand to perform the integral in a single step using the fundamental theorem of calculus. (Evaluate the limits of integration, but don't simplify the arithmetic.
+                \textcolor{blue}{$\int_0^1 7(2x^3+5)^6(6x^2)dx=\int_0^1 \frac{d}{dx}\left((2x^3+5)^7\right)dx=(2x^3+5)^bigg|_0^1$\\
+                $=(2(1)^3+5)^7-(2(0)^3+5)^7$}
+
+
+                \item Next use your awareness of the chain rule pattern in the integrand to label the inner layer $u(x)$. Take the $x$-derivative of the inner layer you have selected.
+                \textcolor{blue}{
+                    \begin{align}
+	                    u(x) = 2x^3+5;\,\,\, \frac{du}{dx} = 6x^2\nonumber
+                    \end{align}
+                }
+
+                \item Substitute the $u(x)$ and $\frac{du}{dx}$ faithfully into your integrand, and make sure the result is a chain rule pattern (i.e. a {\bf{product}} of $u$-BLOB and $\frac{du}{dx}$). Integrate this using the fundamental theorem of calculus. \\
+                \textcolor{blue}{$\int_0^1 7(2x^3+5)^6(6x^2)dx=\int_0^1 7(u(x))^6\frac{d}{dx}dx=\int_0^1 \frac{d}{dx}\left[7\left(\frac{(u(x))^7}{7}\right)\right]dx=(u(x))^7\bigg|_0^1=(2x^3+5)^7\bigg|_0^1=(2(1)^3+5)^7-(2(0)^3+5)^7$}
+
+                \item Create a new integral where you `hide' the $x$-dependency of $u(x)$. Your new integral will use $u$ as the integration variable (no $x$s) and should have the same BLOB as your previous problem, but you should replace the limits of integration with $u(a)$ and $u(b)$. Evaluate this integral. (For this example the power rule for integration is sufficient.)\\
+                \textcolor{blue}{$\int_{2(0)^3+5}^{2(1)^3+5} 7u^6du=7(\frac{u^7}{7})\bigg|_5^7=u^7\bigg|_5^7=7^7-5^7$}
+
+            \end{enumerate}
+        \item Discuss this with your group. Make sure {\bf{everyone}} got the same answers for these two problems. Decide which of the previous two problems you find `easier.' Both are valid ways to use the $u$-substitution technique. The first uses $u$-sub to clarify the chain rule pattern, then the FTC is used and you `keep' the same integral operation. The second procedure trades one integral {\bf{for a completely different integral}} which has the same answer. Come up with one reason why you prefer one method over the other. (Your reason should be convincing to you.)
+        \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Now pick an elementary function/derivative pair $\left\{ u, \frac{du}{dx}\right\}$.(e.g. $\left\{\sin(x),\cos(x)\right\}$, $\left\{e^{2x},2e^{2x}\right\}$) \\
+    \begin{enumerate}
+    
+    \item Create two expressions involving your pair which can be integrated using the $u$-substitution strategy. (Mix your function/derivative pair together using mathematical operations)
+
+
+    \item Create two expressions involving your pair which {\bf{cannot}} be integrated using the $u$-substitution strategy (at least with the $u$ you chose for your pairing.)\\
+    \textcolor{blue}{Here are two examples to get you started:}\\
+        \textcolor{blue}{
+        With $u = x^2$, $\frac{du}{dx} = 2x$.  The table gives examples for 2 and 3, along with the suggested $u$ that does/does not make the example work.}
+        
+        \begin{center}\begin{tabular}{cc}
+        WILL WORK & WON'T WORK\\\hline
+        $\int\frac{2x}{1+x^2}dx$ & $\int\frac{x^2}{1+2x}dx$ \\
+        $u=1+x^2$ & $u=1+2x$ \end{tabular}\end{center}
+        %(Here $u=x^2+1$ is a better choice on the will work example, and $u= 1+2x$ works on the second example. The point you are trying to refine is that $u$-substitution is not `just' picking a function and its derivative from the integrand, but identifying a function and derivative {\bf{which follow the chain rule pattern}})\\
+    
+    \textcolor{blue}{
+        With $u = \tan\theta $, $\frac{du}{dx} = \sec^2\theta$. The table gives examples for 2 and 3, along with the suggested $u$ that does/does not make the example work.}
+       
+        \begin{center}
+        \begin{tabular}{cc}
+        WILL WORK & WON'T WORK\\\hline
+        $\int\frac{\sec^2 \theta}{1+\tan\theta}d\theta$ & $\int\frac{\tan \theta }{1+\sec^2\theta}d\theta$\\
+        $u=1+\tan(\theta)$ & \\\hline
+        $\int \sec^2 \theta e^{\tan \theta} d\theta$ &$\int \tan \theta e^{\sec^2 \theta}d\theta $  \\
+        $u=\tan(\theta)$ & \\
+        \end{tabular}\end{center}
+        %(Here $u=\tan \theta +1$ is a better choice on the will-work example, and the second example simplifies miraculously using Pythagorean identities. The point you are trying to refine is that $u$-substitution is not `just' picking a function and its derivative from the integrand, but identifying a function and derivative {\bf{which follow the chain rule pattern}})\\
+
+
+    
+    Repeat as needed to build up intuition and confidence with the $u$-substitution technique.
+    
+        \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Here are two more examples for practice: 
+        \begin{itemize}
+            \item $$\int \sec(x)\tan(x)(\sec(x)-1)dx$$
+            \textcolor{blue}{$u=\sec(x)-1$ or $u=\sec(x)$: both will work, but I'm going to use the first one.  Check to see how they differ!\\
+            $\frac{du}{dx}=\sec(x)\tan(x)+0$\\
+            $\int \frac{du}{dx}udx=\int udx=\frac{u^2}{2}+c$\\
+            $=\frac{(\sec(x)-1)^2}{2}+c$}
+
+            \item $$\int_0^2 3x^2\sqrt{x^3+1}dx$$
+            \textcolor{blue}{$u=x^3+1$, $\frac{du}{dx}=3x^2+0$}\\
+            \textcolor{blue}{
+            $=\int_{x=0}^{x=2} \frac{du}{dx}\sqrt{u(x)}dx=\int_{x=0}^{x=2} u^{\frac{1}{2}}du=\frac{u^{\frac{3}{2}}}{\frac{3}{2}}\bigg|_{x=0}^{x=2}=\frac{2(x^3+1)^{\frac{3}{2}}}{3}\bigg|_0^2=\frac{2(2^3+1)^{\frac{3}{2}}}{3}-\frac{2(0^3+1)^{\frac{3}{2}}}{3}$}\\
+
+            \textcolor{blue}{OR}\\
+            \textcolor{blue}{$u=x^3+1$, $\frac{du}{dx}=3x^2+0$}\\
+            \textcolor{blue}{$u(2)=9$, $u(0)=1$}\\
+            \textcolor{blue}{$=\int_{u=1}^{u=9} \frac{du}{dx}\sqrt{u(x)}dx=\int_{1}^{9} u^{\frac{1}{2}}du=\frac{u^{\frac{3}{2}}}{\frac{3}{2}}\bigg|_{1}^{9}=\frac{2(9)^{\frac{3}{2}}}{3}-\frac{2(1)^{\frac{3}{2}}}{3}$}
+        \end{itemize}
+
+\end{exercise}
+
+
+\end{document}

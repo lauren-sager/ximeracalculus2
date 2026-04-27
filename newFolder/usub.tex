@@ -1,0 +1,76 @@
+\documentclass{ximera}
+
+\title{$u$-Substitution Activity}
+\author{MATH 426: Calculus II}
+
+\begin{document}
+\begin{abstract}
+   Working with the peers in your group, solve the following problems. Make sure to show and justify all your work. Make sure everyone in the group understands the solution and participates. Be prepared to report your answers to the whole class. 
+\end{abstract}
+\maketitle
+
+The $u$-substitution technique is based on combining the fundamental theorem of calculus with the chain rule pattern of differentiation. The exercise here attempts to make the connection as clear as possible by using simple cooked examples. Our use of notation is different from most texts, and the exercises can refine your understanding of $u$-substitution if you work through them carefully.\\
+
+The preliminary example is intended to setup a situation where you can {\bf{understand}} the equality of the `change of variables theorem' written symbolically below:
+\begin{align}
+	\int_{a}^b F'(u(x))\frac{du}{dx} dx = \int_{u(a)}^{u(b)} F'(u)du \nonumber
+\end{align}
+(When we write the change of variables in this form, hopefully you will notice that there are changes to the limits of integration. If you are aware of that change, then you may realize that `cancelling the $dx$' doesn't fully account for what is happening. PSA: Stop notational abuse.)
+
+\begin{exercise}
+ With your group re-order the numbers: 2,3,5,7 in some way. 
+
+Take your new ordered set of numbers and substitute them into the boxes of the following expression:
+\[(\Box x^\Box +\Box)^\Box\]
+
+    \begin{enumerate}
+        
+        \item Carefully use the rules of differentiation to take the derivative of this expression with respect to $x$. Write out an equation representing the operation you just performed in the following way:
+            \begin{align}
+	            \frac{d}{dx}\left[ \text{your function}\right] = \text{your derivative} \nonumber
+            \end{align}
+
+        \item Create a definite integral with {\bf{your derivative}} as the integrand. (You can pick numbers for $a$ and $b$). 
+
+        \item Next you are going to evaluate your integral {\bf{three times}} and verify the values are the same.
+            \begin{enumerate}
+                \item Use your knowledge of the origin of this integrand to perform the integral in a single step using the fundamental theorem of calculus. (Evaluate the limits of integration, but don't simplify the arithmetic.
+
+                \item Next use your awareness of the chain rule pattern in the integrand to label the inner layer $u(x)$. Take the $x$-derivative of the inner layer you have selected.
+                    \begin{align}
+	                    u(x) = \hspace{1in} \frac{du}{dx} = \nonumber
+                    \end{align}
+
+                \item Substitute the $u(x)$ and $\frac{du}{dx}$ faithfully into your integrand, and make sure the result is a chain rule pattern (i.e. a {\bf{product}} of $u$-BLOB and $\frac{du}{dx}$). Integrate this using the fundamental theorem of calculus. 
+
+                \item Create a new integral where you `hide' the $x$-dependency of $u(x)$. Your new integral will use $u$ as the integration variable (no $x$s) and should have the same BLOB as your previous problem, but you should replace the limits of integration with $u(a)$ and $u(b)$. Evaluate this integral. (For this example the power rule for integration is sufficient.)
+
+            \end{enumerate}
+        \item Discuss this with your group. Make sure {\bf{everyone}} got the same answers for these two problems. Decide which of the previous two problems you find `easier.' Both are valid ways to use the $u$-substitution technique. The first uses $u$-sub to clarify the chain rule pattern, then the FTC is used and you `keep' the same integral operation. The second procedure trades one integral {\bf{for a completely different integral}} which has the same answer. Come up with one reason why you prefer one method over the other. (Your reason should be convincing to you.)
+        \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Now pick an elementary function/derivative pair $\left\{ u, \frac{du}{dx}\right\}$.(e.g. $\left\{\sin(x),\cos(x)\right\}$, $\left\{e^{2x},2e^{2x}\right\}$) 
+    \begin{enumerate}
+
+    \item Create two expressions involving your pair which can be integrated using the $u$-substitution strategy. (Mix your function/derivative pair together using mathematical operations)
+
+
+    \item Create two expressions involving your pair which {\bf{cannot}} be integrated using the $u$-substitution strategy (at least with the $u$ you chose for your pairing.)\\
+    
+    Repeat as needed to build up intuition and confidence with the $u$-substitution technique. 
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Here are two more examples for practice: 
+        \begin{itemize}
+            \item $$\int \sec(x)\tan(x)(\sec(x)-1)dx$$
+            \item $$\int_0^2 3x^2\sqrt{x^3+1}dx$$
+        \end{itemize}
+
+\end{exercise}
+
+
+\end{document}
