@@ -1,0 +1,84 @@
+\documentclass{ximera}
+
+\title{Area Between Curves Activity}
+\author{MATH 426: Calculus II}
+
+\begin{document}
+\begin{abstract}
+   Working with the peers in your group, solve the following problems. Make sure to show and justify all your work. Make sure everyone in the group understands the solution and participates. Be prepared to report your answers to the whole class. 
+\end{abstract}
+\maketitle
+
+\begin{exercise}
+Consider the definite integral:
+\begin{align}
+	\int_{a}^b f(x) dx \nonumber
+\end{align}
+    \begin{enumerate}
+        \item Assume that $a$ and $b$ are both constants with $a < b$. Assume $f(x)>0$. Draw a generic sketch of the meaning of this definite integral. \\
+        
+         Consider the definite integral:
+\begin{align}
+	\int_{a}^b g(x) dx \nonumber
+\end{align}
+        \item Assume that $a$ and $b$ are both constants with $a < b$. Assume that $g(x)$ has exactly one {\bf{root}} in the interval $(a,b)$. Draw a generic sketch of the meaning of this definite integral.
+        \item Suppose that you need to compute the total {\bf{geometric}} area between $g(x)$ and the $x$-axis between $a$ and $b$. How would you construct this area using integrals? (Can you construct the area without using an absolute value?)
+    \end{enumerate}
+
+\end{exercise}
+
+
+
+
+
+\begin{exercise}
+    Have your group create two affine functions with positive slopes:
+    \begin{align}
+    	L_{1}(x) = m_{1}x + b_1, \hspace{.2in} L_{2}(x) = m_{2} x + b_2 \nonumber
+    \end{align}
+    Choose your slopes so that {\bf{both}} $m_{1} >m_2$, and $b_1>b_2$. Plot both of these lines on the interval $x\in [0,2]$. Your sketch should reveal that one of the lines is always on `top.'
+    \begin{enumerate}
+        \item Express the area under $L_{1}$ as a definite integral. Express the area under $L_2$ as a definite integral. Determine how to combine these integrals to capture the geometric area between them.
+        \item Have your group discuss the situation where you are trying to determine the geometric area between two curves $f(x)$ and $g(x)$ (not the same as your generic line sketches above) on a specific interval $(a,b)$. If you are struggling to identify what is going on, sketch the areas represented and relate them to integrals.
+        \begin{enumerate}
+            \item What happens if one of the functions has all positive values, and the other function has all negative values? 
+            \item What happens if {\bf{both}} of the functions have negative values?
+            \item What happens if the functions cross over one another in the domain?
+            \item Discuss whether there is one framework which can handle all of the situations you considered separately. 
+        \end{enumerate}
+    \end{enumerate}
+
+\end{exercise}
+
+\begin{exercise}
+    Use your discussion and your framework to \textbf{set up} the geometric area between each of the following sets of curves. (Use the interval $x\in (-2,2)$ for all of these exercises.) %If you have fully grasped the important concepts, you will not need to use symmetry or absolute value to correctly capture the areas.)
+    \begin{align}
+        f_{1} &= x^2 -1, \hspace{.2in} &g_{1} = 1-x^2 \nonumber \\
+        f_{2} &= x+2, \hspace{.2in} &g_{2} = x-2 \nonumber\\
+        f_{3} &= x, \hspace{.2in} &g_{3}= -x \nonumber\\
+        f_{4} &= 2x, \hspace{.2in} &g_{4}= -\frac{x}{2}\nonumber\\
+        f_5 &= x^2-2x+2, \hspace{.2in} &g_5 = x \nonumber
+    \end{align}
+    (Your TA/LA can provide numerical answers for you to check your constructions).
+\end{exercise}
+
+
+
+\begin{exercise}
+    Suppose you want to find the geometric area between two polynomial functions on a given interval $(a,b)$
+        \begin{align}
+        	P(x) = c_{n}x^n + c_{n-1}x^{n-1} + \dots +c_1x+ c_{0}, \hspace{.2in} Q(x) = k_{n}x^n + k_{n-1}x^{n-1} + \dots k_1x+ k_{0}.\nonumber
+        \end{align}
+With your groups discuss both of the following questions:
+        \begin{enumerate}
+            \item Under what conditions would this question be 'easy'?(Think about mathematical properties and situational properties, what would make the math easy to set-up, what would make the math easy to do?)
+            \item Under what conditions would you be able to find intersections between $P$ and $Q$ by hand?
+        \end{enumerate}
+\end{exercise}
+
+
+
+
+
+
+\end{document}
