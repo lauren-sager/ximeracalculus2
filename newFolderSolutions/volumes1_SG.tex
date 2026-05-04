@@ -1,0 +1,35 @@
+\documentclass{ximera}
+
+\title{Volumes Solution Guide}
+\author{MATH 426: Calculus II}
+
+\begin{document}
+\begin{abstract}
+   Working with the peers in your group, solve the following problems. Make sure to show and justify all your work. Make sure everyone in the group understands the solution and participates. Be prepared to report your answers to the whole class. 
+\end{abstract}
+\maketitle
+
+\begin{exercise}
+    Let $V$ be the volume of a right circular cone with height 10 and radius of the base 4.  (Hint: Draw a picture.  Your work will be neater if you have the tip of the cone at the origin, and your cone should point upwards.  You may also choose to draw your cone along the $x$-axis and use height $x$.)
+    \begin{center}
+        \desmosThreeD{iwv7fjskum}{800}{600}
+    \end{center}
+    \begin{enumerate}
+        \item Find the area of a horizontal cross section of your cone at height $y$ using similar triangles.
+        \textcolor{blue}{Ratio of the sides of the similar triangles: $\frac4{10}=\frac{r}{y}$ \\
+        Solve for r: $\frac{4y}{10}=r$ or $r=\frac{2}{5}y$
+        $A(y)=\pi r^2=\pi(\frac{2}{5}y)^2=\frac{4\pi}{25}y^2$}
+
+        \item Calculate $V$ by integrating the cross sectional area. \\
+        \textcolor{blue}{ $V=\displaystyle \int_0^{10} \frac{4\pi}{25}y^2dy=\frac{4\pi}{25}\frac{y^3}{3}\bigg|_0^{10}=\frac{4\pi}{75}(10^3)-\frac{4\pi}{75}(0^3)$}
+
+        \item (Extension problem, if you have time) Use a similar method to find the volume of a right circular cone with height $h$ and radius of the base $R$.\\
+        \textcolor{blue}{ If you do this, the similar triangle side ratio becomes $\frac{r}{h}=\frac{x}{y}$, meaning $x=\frac{r}{h}y$.\\
+        $A(y)=\pi(\frac{r}{h}y)^2=\frac{r^2\pi}{h^2}y^2$\\
+        $\displaystyle V=\int_0^h \frac{r^2\pi}{h^2}y^2dy=\frac{r^2\pi}{h^2}\frac{y^3}{3}\bigg|_0^h= \frac{r^2\pi h^3}{3h^2}-0=\frac13\pi r^2h $ (which is the volume equation for a right circular cone.}
+    \end{enumerate}
+\end{exercise}
+
+
+
+\end{document}
