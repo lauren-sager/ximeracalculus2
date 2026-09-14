@@ -9,35 +9,35 @@
 \end{abstract}
 \maketitle
 
-\begin{exercise}
-Consider the definite integral:
-\begin{align}
-	\int_{a}^b f(x) dx \nonumber
-\end{align}
-    \begin{enumerate}
-        \item Assume that $a$ and $b$ are both constants with $a < b$. Assume $f(x)>0$. Draw a generic sketch of the meaning of this definite integral. \\
-        \textcolor{blue}{Here is an example (note that to graph in Desmos, it cannot be generic, so a similar sketch without the numerical/function is what we are expecting):}
-        \begin{center}
-            \desmos{yt1y0w6asx}{800}{600}
-        \end{center}
-        \textcolor{blue}{Make sure that expression 1 is toggled ON and expressions 2 and 3 are toggled OFF (click the circle next to the expression).}
-         Consider the definite integral:
-\begin{align}
-	\int_{a}^b g(x) dx \nonumber
-\end{align}
-        \item Assume that $a$ and $b$ are both constants with $a < b$. Assume that $g(x)$ has exactly one {\bf{root}} in the interval $(a,b)$. Draw a generic sketch of the meaning of this definite integral.\\
-        \textcolor{blue}{Here is an example (note that to graph in Desmos, it cannot be generic, so a similar sketch without the numerical/function is what we are expecting):}
-        \begin{center}
-            \desmos{yt1y0w6asx}{800}{600}
-        \end{center}
-        \textcolor{blue}{Make sure that expression 1 is toggled OFF and expressions 2 and 3 are toggled ON (click the circle next to the expression).}
+ \begin{exercise}
+ Consider the definite integral:
+ \begin{align}
+     	\int_{a}^b f(x) dx \nonumber
+ \end{align}
+     \begin{enumerate}
+         \item Assume that $a$ and $b$ are both constants with $a < b$. Assume $f(x)>0$. Draw a generic sketch of the meaning of this definite integral. \\
+         \textcolor{blue}{Here is an example (note that to graph in Desmos, it cannot be generic, so a similar sketch without the numerical/function is what we are expecting):}
+         \begin{center}
+             \desmos{yt1y0w6asx}{800}{600}
+         \end{center}
+         \textcolor{blue}{Make sure that expression 1 is toggled ON and expressions 2 and 3 are toggled OFF (click the circle next to the expression).}
+          Consider the definite integral:
+ \begin{align}
+ 	\int_{a}^b g(x) dx \nonumber
+ \end{align}
+         \item Assume that $a$ and $b$ are both constants with $a < b$. Assume that $g(x)$ has exactly one {\bf{root}} in the interval $(a,b)$. Draw a generic sketch of the meaning of this definite integral.\\
+         \textcolor{blue}{Here is an example (note that to graph in Desmos, it cannot be generic, so a similar sketch without the numerical/function is what we are expecting):}
+         \begin{center}
+             \desmos{yt1y0w6asx}{800}{600}
+         \end{center}
+         \textcolor{blue}{Make sure that expression 1 is toggled OFF and expressions 2 and 3 are toggled ON (click the circle next to the expression).}
 
-        \item Suppose that you need to compute the total {\bf{geometric}} area between $g(x)$ and the $x$-axis between $a$ and $b$. How would you construct this area using integrals? (Can you construct the area without using an absolute value?)\\
-        \textcolor{blue}{The geometric area is always positive, so we \textit{could} use an absolute value like this: $\int_a^b |g(x)|dx$, but it will often help us to not use absolute value and instead break the integral up into pieces.  Assuming the root of $g(x)$ is at $x=c$ with $a<c<b$ and $g$ is first above, then below the $x$-axis, as in my graph:
-        \[\int_a^c g(x)dx+\int_c^b -g(x)dx=\int_a^c g(x)dx-\int_c^b g(x)dx\]}
-    \end{enumerate}
+         \item Suppose that you need to compute the total {\bf{geometric}} area between $g(x)$ and the $x$-axis between $a$ and $b$. How would you construct this area using integrals? (Can you construct the area without using an absolute value?)\\
+         \textcolor{blue}{The geometric area is always positive, so we \textit{could} use an absolute value like this: $\int_a^b |g(x)|dx$, but it will often help us to not use absolute value and instead break the integral up into pieces.  Assuming the root of $g(x)$ is at $x=c$ with $a<c<b$ and $g$ is first above, then below the $x$-axis, as in my graph:
+         \[\int_a^c g(x)dx+\int_c^b -g(x)dx=\int_a^c g(x)dx-\int_c^b g(x)dx\]}
+     \end{enumerate}
 
-\end{exercise}
+ \end{exercise}
 
 
 
@@ -88,19 +88,19 @@ Consider the definite integral:
 
 
 
-\begin{exercise}
-    Suppose you want to find the geometric area between two polynomial functions on a given interval $(a,b)$
-        \begin{align}
-        	P(x) = c_{n}x^n + c_{n-1}x^{n-1} + \dots +c_1x+ c_{0}, \hspace{.2in} Q(x) = k_{n}x^n + k_{n-1}x^{n-1} + \dots k_1x+ k_{0}.\nonumber
-        \end{align}
-With your groups discuss both of the following questions:
-        \begin{enumerate}
-            \item Under what conditions would this question be 'easy'?(Think about mathematical properties and situational properties, what would make the math easy to set-up, what would make the math easy to do?)\\
-            \textcolor{blue}{We will need to be able to find any intersection points between the polynomials, so the simpler the polynomial forms, the easier the problem will be.  Also, we need to find out which function is on top and on the bottom, so the simpler the polynomials are, the easier to sub in values to figure this out.  Additionally, the number of intersections will complicate setting up the integrals. }
-            \item Under what conditions would you be able to find intersections between $P$ and $Q$ by hand?\\
-            \textcolor{blue}{Basically, we need to be able to solve the equation $P(x)=Q(x)$.  Unless nice factoring, cancelling or other nice things happen, we can do this by hand up to quadratic equations.}
-        \end{enumerate}
-\end{exercise}
+ \begin{exercise}
+     Suppose you want to find the geometric area between two polynomial functions on a given interval $(a,b)$
+         \begin{align}
+         	P(x) = c_{n}x^n + c_{n-1}x^{n-1} + \dots +c_1x+ c_{0}, \hspace{.2in} Q(x) = k_{n}x^n + k_{n-1}x^{n-1} + \dots k_1x+ k_{0}.\nonumber
+         \end{align}
+ With your groups discuss both of the following questions:
+         \begin{enumerate}
+             \item Under what conditions would this question be 'easy'?(Think about mathematical properties and situational properties, what would make the math easy to set-up, what would make the math easy to do?)\\
+             \textcolor{blue}{We will need to be able to find any intersection points between the polynomials, so the simpler the polynomial forms, the easier the problem will be.  Also, we need to find out which function is on top and on the bottom, so the simpler the polynomials are, the easier to sub in values to figure this out.  Additionally, the number of intersections will complicate setting up the integrals. }
+             \item Under what conditions would you be able to find intersections between $P$ and $Q$ by hand?\\
+             \textcolor{blue}{Basically, we need to be able to solve the equation $P(x)=Q(x)$.  Unless nice factoring, cancelling or other nice things happen, we can do this by hand up to quadratic equations.}
+         \end{enumerate}
+ \end{exercise}
 
 
 
