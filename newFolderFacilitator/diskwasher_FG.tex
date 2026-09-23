@@ -1,0 +1,93 @@
+\documentclass{ximera}
+
+\title{Disk and Washer Method Activity Facilitator Guide}
+\author{MATH 426: Calculus II}
+
+\begin{document}
+\begin{abstract}
+   Working with the peers in your group, solve the following problems. Make sure to show and justify all your work. Make sure everyone in the group understands the solution and participates. Be prepared to report your answers to the whole class. 
+\end{abstract}
+\maketitle
+
+\textbf{Student Learning Outcomes}\\
+Students should be able to:\\
+    \begin{itemize}
+        \item Apply the disk method to find volumes of solids of revolution.
+        \item Apply the washer method to find volumes of solids of revolution.
+        \item (If time) Formulate and evaluate integrals for volumes of revolution around different axes.
+    \end{itemize}
+
+\textbf{Prerequisites:} Students will need to be familiar with the disk and washer methods for computing volume. Students will need to recall the volume formulas for right circular cones, and spheres, or look up these formulas as a reminder.
+
+\begin{exercise}
+In the figure below you will see two different area profiles for functions $f$ and $g$, respectively. 
+    \begin{image}
+    \includegraphics{6.3cone.png}
+    \end{image}
+
+    \begin{image}
+    \includegraphics{6.3disks2.png}
+    \end{image}
+If you rotate the curves $f$ and $g$ around the $x$-axis they will scoop out cone-shaped or ``horn''-shaped volumes with the same radius and height. Draw a sketch of each solid, and a representative cross-section. (Visualization hint: The cones all point to the right.)\\
+    \begin{enumerate}
+        \item Choose a constant value $a>0$ and set $r = h = a$. Determine the formula for $f(x)$ so that it follows the profile in the first picture. Formulate the volume of the region obtained by rotating $f$ around the $x$-axis using the disk method. Evaluate your integral and verify that the numerical value of the volume agrees with the cone volume formula for $r$ and $h$.\\
+        {\color{blue} $V=\displaystyle \int_0^a\pi(-x+a)^2dx$\\
+        $=-\pi\frac{(-x+a)^3}{3}\bigg|_0^a=-\frac{\pi}{3}(-a+a)^3+\frac{\pi}{3}(0+a)^3=\frac{\pi a^3}{3}$}
+        %\vspace{1in}
+        \item Using the same choice of $r=h=a$, the formula for $g(x)=\frac{1}{a}(x-a)^2$.  Formulate the volume of the region obtained by rotating $g$ around the $x$-axis using the disk method.  Evaluate your integral, and compare your answer with the cone volume in (a).\\
+        {\color{blue} $V=\displaystyle \int_0^a \pi(\frac{1}{a}(x-a)^2)^2dx=\int_0^a \frac{\pi}{a^2}(x-a)^4dx$\\
+        $=\frac{\pi}{a^2}\frac{(x-a)^5}{5}\bigg|_0^a=\frac{\pi(a-a)^5}{5a^2}-\frac{\pi(-a)^5}{5a^2}=\frac{\pi a^3}{5}$}
+        %\vspace{1in}
+        \item Also formulate the volumes of the regions formed by rotating $f$ and $g$ around the $y$-axis using the disk method.  Compare your answers with (a) and (b). (Hint: you will need to reformulate the equations for $f$ and $g$ into functions of $y$. Think about the part of the $g$ curve that is actually rotating.)
+        {\color{blue} For $f$: $y=-x+3$ so $x=-y+3$\\
+        $V=\displaystyle \int_0^a\pi(-y+a)^2dy$\\
+        $=-\pi\frac{(-y+a)^3}{3}\bigg|_0^a=-\frac{\pi}{3}(-a+a)^3+\frac{\pi}{3}(0+a)^3=\frac{\pi a^3}{3}$\\
+        This is the same area as (a).\\
+        For $g$: $y=\frac{1}{a}(x-a)^2$ so $x=a-\sqrt{ay}$\\
+        $V=\displaystyle\int_0^a \pi(a-\sqrt{ay})^2dy$\\
+        $=\displaystyle \pi\int_0^a (a^2-2a\sqrt{ay}+ay)dy$\\
+        $=\displaystyle (a^2y-\frac{4}{3}(ay)^{\frac{3}{2}}+\frac{ay^2}{2})\bigg|_0^a=a^3-\frac{4}{3}a^3+\frac{a^3}{2}-0=\frac{\pi a^3}{6}$\\
+        Different area from (b).}
+        %\vspace{1in}
+        \item Formulate the volume of the region formed by rotating $f$ around the line $x=h$.  Evaluate your integral.  \\
+        {\color{blue} $h=a$, so $V=\displaystyle\int_0^a \pi(a^2-(a-(-y-a))^2dy=\int_0^a \pi(a^2-y^2)dy=\pi a^2y-\pi\frac{y^3}{3}\bigg|_0^a=\pi a^3-\frac{\pi a^3}{3}-0=\frac{2\pi a^3}{3}$}
+        %\item A `skinny' cone. Choose positive values so that $h_2>R_2>0$. Determine the formula for $f_{2}(x)$ so that it follows the profile in the first picture. Formulate the volume of the region obtained by rotating $f_{2}$ around the $x$-axis using the disk method. Evaluate your integral and verify that the numerical value of the volume agrees with the cone volume formula for $R_2$ and $h_2$.
+        %\vspace{1in}
+        %\item A `wide' cone. Choose positive values so that $R_3>h_3>0$. Determine the formula for $f_{3}(x)$ so that it follows the profile in the first picture. Formulate the volume of the region obtained by rotating $f_{3}$ around the $x$-axis using the disk method. Evaluate your integral and verify that the numerical value of the volume agrees with the cone volume formula for $R_3$ and $h_3$.
+
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    The upper half of the unit circle is often represented by the function $y = \sqrt{1-x^2}$. Draw a sketch of this curve and formulate a volume of revolution problem that you think will capture the volume of the unit sphere. (If you have time, evaluate your integral and compare the result with the volume of the unit sphere. If you are running low on time, check your integral formulation with your TA/LA)\\
+    {\color{blue} $V=\displaystyle \int_{-1}^1\pi(\sqrt{1-x^2})^2dx=\int_{-1}^1\pi(1-x^2)dx$\\
+    $=\pi(x-\frac{x^3}{3})\bigg|_{-1}^1=\pi(1-\frac{1}{3})-\pi(-1-\frac{-1}{3})=\frac{4\pi}{3}$\\
+    The volume of a sphere is $\frac{4}{3}\pi r^3$, so with $r=1$, $V=\frac{4\pi}{3}$}
+\end{exercise}
+
+\begin{exercise}
+    Find the volume of the solid obtained by rotating the region bounded by $y=x^2$ and $y=4$ about the $x$-axis.  \\
+    {\color{blue} $V=\displaystyle \int_0^2\pi(4^2-(x^2)^2)dx=\int_0^2\pi(16-x^4)dx$\\
+    $=\pi(16x-\frac{x^5}{5})\bigg|_0^2=\pi(32-\frac{32}{5})-0=\frac{128\pi}{5}$}
+\end{exercise}
+
+\begin{exercise}
+    (Time permitting). Suppose you wanted to move the axis of rotation to the line $y=L$. Use the geometric ideas outlined in class to change the disk method so that it can capture the volume of revolution for a generic function $f$ around different horizontal axes. To help direct your discussion two hints are given below. These are separate hints, and it is possible to get to a correct result using either one of the hints.\\
+%\begin{center}
+%\includegraphics[width=150pt]{newaxis.jpg}
+%\end{center}
+
+
+    (Hint-1: Try to construct the correct formula by making a direct measurement of the radius of the rotating profile.)\\
+
+    (Hint-2: One way to approach the problem is to transform it into a problem we already know how to solve. Try to perform a change of coordinates which `moves' the line $y=L$ back to the $x$-axis.)\\
+    
+    {\color{blue} A sketch of a generic graph may be helpful here. If $f>L$ for all $x$ in the interval, then $r(x)=f(x)-L$.  If $f<L$, then $r(x)=L-f(x)$.  Generally, $r(x)=|f(x)-L|$, but as we square $r(x)$ in the integral, $(r(x))^2=(f(x)-L)^2$.\\
+    $V(x)=\displaystyle \int_a^b \pi (f(x)-L)^2dx $}
+
+\end{exercise}
+
+
+
+
+\end{document}
