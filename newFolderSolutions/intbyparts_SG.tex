@@ -1,0 +1,148 @@
+\documentclass{ximera}
+
+\title{Integration by Parts Activity}
+\author{MATH 426: Calculus II}
+
+\begin{document}
+\begin{abstract}
+   Working with the peers in your group, solve the following problems. Make sure to show and justify all your work. Make sure everyone in the group understands the solution and participates. Be prepared to report your answers to the whole class. 
+\end{abstract}
+\maketitle
+
+\textbf{Student Learning Outcomes}\\
+Students should be able to: \\
+    \begin{itemize}
+        \item Integrate simple expressions using integration by parts once or making something from nothing to create the ingredients for integration by parts.
+        \item Integrate more complicated expressions using multiple iterations of integration by parts, making something from nothing or cyclic integration by parts.
+        \item Create examples of expressions that can be intergrated by various methods of integration by parts.
+    \end{itemize}
+
+\textbf{Prerequisites:} Students will need to know the integration by parts formula, and the method of making something from nothing to create integration by parts structure.  Students also need to be familiar with the integration by parts categories.
+
+\begin{exercise}
+    Evaluate the following integrals.
+    \begin{enumerate}
+    
+        \item $\displaystyle \int (x^2-3x+4)e^{3x}dx$\\
+        \textcolor{blue}{
+        \begin{tabular}{c|c}
+           $f(x)=x^2-3x+4$  & $g'(x)=e^{3x}$  \\ \hline
+           $f'(x)=2x-3$  &  $g(x)=\frac13e^{3x}$
+        \end{tabular}\\
+        $=\frac13e^{3x}(x^2-3x+4)-\displaystyle\int\frac13e^{3x}(2x-3)dx$\\
+         \begin{tabular}{c|c}
+           $f_1(x)=2x-3$  & $g_1'(x)=\frac13e^{3x}$  \\\hline
+           $f_1'(x)=2$  &  $g_1(x)=\frac19e^{3x}$
+        \end{tabular}\\
+        $=\frac13e^{3x}(x^2-3x+4)-\frac19e^{3x}(2x-3)+\displaystyle\int\frac29e^{3x}dx$\\
+        $=\frac13e^{3x}(x^2-3x+4)-\frac19e^{3x}(2x-3)+\frac2{27}e^{3x}+c$\\}
+        
+        \item $\displaystyle \int_0^\pi x^2\sin(x)dx$
+        \textcolor{blue}{
+        \begin{tabular}{c|c}
+            $f(x)=x^2$ & $g'(x)=\sin(x)$ \\ \hline
+            $f'(x)=2x$ & $g(x)=-\cos(x)$
+        \end{tabular}\\
+        $=-x^2\cos(x)\bigg|_0^{\pi}-\displaystyle\int_0^{\pi} -2x\cos(x)dx$\\
+        \begin{tabular}{c|c}
+            $f_1(x)=2x$ & $g_1'(x)=\cos(x)$ \\ \hline
+            $f_1'(x)=2$ & $g_1(x)=\sin(x)$
+        \end{tabular}\\
+         $=-x^2\cos(x)\bigg|_0^{\pi}+2x\sin(x)\bigg|_0^{\pi}-\displaystyle\int_0^{\pi} 2\sin(x)dx$\\
+         $=-x^2\cos(x)\bigg|_0^{\pi}+2x\sin(x)\bigg|_0^{\pi}+2\cos(x)\bigg|_0^{\pi}$\\
+         $\pi^2(-1)-0+0-0+2(-1)-2(1)=\pi^2-4$}
+        
+        \item $\displaystyle \int_0^\pi x\sin(x^2)dx$\\
+        {\color{blue} $u=x^2$, $\frac{du}{dx}=2x$ or $\frac{1}{2}\frac{du}{dx}=x$\\
+        $\displaystyle\int_{x=0}^{x=\pi}\frac12\sin(u)du=-\frac12\cos(x^2)\bigg|_0^{\pi}=-\frac12\cos(\pi^2)+\frac12$}
+        %\vspace{.75in}
+        \item $\displaystyle \int e^{2x}\cos(2x)dx$\\
+        \textcolor{blue}{(You can start with a small u-sub here for $u=2x$ if you would like!\\
+        \begin{tabular}{c|c}
+            $f(x)=\cos(2x)$ & $g'(x)=e^{2x}$  \\ \hline
+            $f'(x)=-2\sin(2x)$ & $g(x)=\frac12e^{2x}$ 
+        \end{tabular}\\
+        $=\frac12e^{2x}\cos(2x)+\displaystyle\int\frac12e^{2x}(2\sin(2x))dx$\\
+        \begin{tabular}{c|c}
+            $f_1(x)=\sin(2x)$ & $g_1'(x)=e^{2x}$  \\ \hline
+            $f_1'(x)=2\cos(2x)$ & $g_1(x)=\frac12e^{2x}$ 
+        \end{tabular}\\
+        $=\frac12e^{2x}\cos(2x)+\frac12e^{2x}\sin(2x)-\displaystyle\int\frac12e^{2x}(2\cos(2x))dx$\\
+        $=\frac12e^{2x}\cos(2x)+\frac12e^{2x}\sin(2x)-\displaystyle\int e^{2x}\cos(2x)dx$\\
+        $2\displaystyle\int e^{2x}\cos(2x)dx=\frac12e^{2x}\cos(2x)+\frac12e^{2x}\sin(2x)$\\
+         $\displaystyle\int e^{2x}\cos(2x)dx=\frac14e^{2x}\cos(2x)+\frac14e^{2x}\sin(2x)+c$\\}
+        
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Create examples of of the following types of integrals (use question 1 for ideas, but do not just copy the examples directly from this question.)
+
+       \textcolor{blue}{ There are many examples of each type! }
+       \begin{enumerate}
+        \item A "standard" single integration by parts integral.\\
+        \textcolor{blue}{ $$\int xe^xdx$$}
+        
+        \item A example which requires 3 steps of integration by parts.\\
+        \textcolor{blue} {$$\int x^3\sin(x)dx$$}
+       
+        \item A cyclic integration by parts example.\\
+        {\color{blue} $$\int e^{2x}\sin(x)dx$$}
+        
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    As a group discuss one of the following four examples.  Try to solve it, but if you get stuck, ask your TA or LA for help.  At least come up with a plan of attack before you ask them. 
+\begin{align}
+	\int x^2e^x dx,\hspace{.2in}\int \arctan(x)dx, \hspace{.2in}\int \arcsin(x) dx, \hspace{.2in} \int \arccos(x)dx \nonumber
+\end{align}
+\end{exercise}
+
+\textcolor{blue}{ $\int x^2e^x dx$ requires two integration by parts implementations.\\
+\begin{tabular}{c|c}
+   $f_1(x)=x^2$ & $g_1'(x)=e^x$ \\\hline 
+   $f_1'(x)=2x$  & $g_1(x)=e^x$ 
+\end{tabular}\\
+$=x^2e^x-\int2xe^xdx$\\
+Second IBP:
+\begin{tabular}{c|c}
+   $f_2(x)=2x $ & $g_2'(x)=e^x$ \\\hline 
+   $f_2'(x)=2$  & $g_2(x)=e^x$
+\end{tabular}\\
+$=x^2e^x-\big(2xe^x-\int2e^xdx\big)$\\
+$=x^2e^x-\big(2xe^x-2e^x\big)$\\
+\\
+$]int \arctan(x)dx$ requires us to make something from nothing.\\
+\begin{tabular}{c|c}
+    $f(x)=\arctan(x)$ & $g'(x)=1$ \\ \hline
+    $f'(x)=\frac{1}{1+x^2}$ & $g(x)=x$
+\end{tabular}\\
+$=x\arctan(x)-\int \frac{x}{1+x^2}dx$\\
+Using $u$-substitution: $u=1+x^2$; $\frac{du}{dx}=2x$ or $\frac{1}{2}\frac{du}{dx}=x$\\
+$=x\arctan(x)-\int\frac{1}{2u}du=x\arctan(x)-\frac12\ln(u)+c$\\
+$=x\arctan(x)-\frac12\ln(1+x^2)+c$\\
+\\
+$\int\arcsin(x)dx$ requires us to make something from nothing.\\
+\begin{tabular}{c|c}
+    $f(x)=\arcsin(x)$ & $g'(x)=1$ \\ \hline
+    $f'(x)=\frac{1}{\sqrt{1-x^2}}$ & $g(x)=x$
+\end{tabular}\\
+$=x\arcsin(x)-\int \frac{x}{\sqrt{1-x^2}}dx$\\
+Using $u$-substitution: $u=1-x^2$; $\frac{du}{dx}=-2x$ or $-\frac{1}{2}\frac{du}{dx}=x$\\
+$=x\arcsin(x)-\int-\frac{1}{2\sqrt{u}}du=x\arcsin(x)+\frac12(2)(u)^{1/2}c$\\
+$=x\arcsin(x)-(1-x^2)^{1/2}+c$\\
+\\
+$\int\arccos(x)dx$ requires us to make something from nothing.\\
+\begin{tabular}{c|c}
+    $f(x)=\arccos(x)$ & $g'(x)=1$ \\ \hline
+    $f'(x)=-\frac{1}{\sqrt{1-x^2}}$ & $g(x)=x$
+\end{tabular}\\
+$=x\arccos(x)-\int -\frac{x}{\sqrt{1-x^2}}dx$\\
+Using $u$-substitution: $u=1-x^2$; $\frac{du}{dx}=-2x$ or $-\frac{1}{2}\frac{du}{dx}=x$\\
+$=x\arccos(x)+\int-\frac{1}{2\sqrt{u}}du=x\arccos(x)+\frac12(2)(u)^{1/2}+c$\\
+$=x\arccos(x)+(1-x^2)^{1/2}+c$
+}
+
+
+\end{document}
