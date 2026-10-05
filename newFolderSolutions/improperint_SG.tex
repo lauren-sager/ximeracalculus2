@@ -1,0 +1,105 @@
+\documentclass{ximera}
+
+\title{Improper Integrals Activity Solution Guide}
+\author{MATH 426: Calculus II}
+
+\begin{document}
+\begin{abstract}
+   Working with the peers in your group, solve the following problems. Make sure to show and justify all your work. Make sure everyone in the group understands the solution and participates. Be prepared to report your answers to the whole class. 
+\end{abstract}
+\maketitle
+
+\begin{exercise}
+Analyze the following family of integrals.
+\begin{align}
+	\int_{0}^1 \frac{1}{x^p} dx \nonumber
+\end{align}
+\begin{enumerate}
+\item As a group discuss how the value of $p$ will influence the integral above. (Specifically determine the range of $p$ where the integrand is continuous over the whole domain of integration, and the range of $p$ for which the integrand has an infinite discontinuity.)\\
+    \textcolor{blue}{When $p<0$, $p$ is a negative power, meaning $\frac{1}{x^p}=x^p$(where $p$ is now positive), which is continuous everywhere.  When $p=0$, $x^{0}=1$, so the integrand is just $1$, and thus continuous.  Thus the integrand has an infinite discontinuity on the domain when $p>0$.}
+
+\item If $p$ is chosen so that the integral is `improper' introduce a limit operation which changes the domain and `approaches' the discontinuity from one side.\\
+    \textcolor{blue}{$$\int_0^1\frac{1}{x^p}dx=\lim_{t\to 0^+}\int_t^1\frac{1}{x^p}dx$$}
+\item Evaluate the integral and determine the range of $p$ for which this integral converges. (Note: The answer should {\bf{not}} be the same as with type I improper integrals, since this is a different domain.)\\When $p>0$,\\
+    \textcolor{blue}{$$\int_0^1\frac{1}{x^p}dx=\lim_{t\to 0^+}\int_t^1\frac{1}{x^p}dx$$\\
+$$=\lim_{t\rightarrow 0^+}\frac{x^{-p+1}}{-p+1}\bigg|_t^1=\lim_{t\rightarrow 0^+}\frac{1}{-p+1}-\frac{t^{-p+1}}{-p+1}$$\\
+When $0<p<1$, $\lim_{t\rightarrow 0^+}\frac{t^{-p+1}}{-p+1}=0$, and thus the integral converges to $\frac{1}{-p+1}$. \\
+When $p>1$, $\lim_{t\rightarrow 0^+}\frac{t^{-p+1}}{-p+1}=\lim_{t\rightarrow 0^+}\frac{1}{(-p+1)t^{p-1}}=-\infty$, and thus the integral diverges.\\
+When $p=1$, $\lim{t\rightarrow 0^+}\int_t^1 \frac1{x}dx=\lim_{t\rightarrow 0^+}\ln|x|\bigg|_t^1=\lim_{t\rightarrow 0^+}\ln(1)-\ln(t)=\infty$, and thus the integral diverges.}
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    As a group create an example of each of the following situations. (This type of problem helps familiarize you with the mathematical notation and terminology without requiring you to perform calculations. Example creation requires you to engage with the concepts in a different and complimentary way to performing calculations, so it is worthwhile for you to study and be able to create examples of the many types of mathematical objects we study).\\
+
+
+\begin{enumerate}
+\item Create an example of a {\bf{convergent}} improper integral involving an infinite domain. (Type 1).\\
+\textcolor{blue}{ $$\int_1^\infty \frac{1}{x^6}dx$$}
+\item Create an example of a {\bf{divergent}} improper integral involving an infinite domain. (Type 1).\\
+\textcolor{blue}{ $$\int_1^\infty x^6dx$$}
+\item Create an example of a {\bf{convergent}} improper integral involving an infinite discontinuity (Type 2).\\
+\textcolor{blue}{ $$\int_0^3 \frac{1}{x^{1/2}}dx$$}
+\item Create an example of a {\bf{divergent}} improper integral involving an infinite discontinuity. (Type 2).\\
+\textcolor{blue}{ $$\int_0^2 \frac{1}{x^6}dx$$}
+\item Create an example of an improper integral (any type) with an integrand other than $\frac{1}{x^p}$.\\
+\textcolor{blue}{ $$\int_0^e \ln(x)dx$$}
+\item Create an example of an improper integral with the domain $(1,3)$. (You can achieve this in lots of ways. One possibility is with a `shifting` transformation, another is to use an integrand with a discontinuity which naturally occurs in the given interval.)\\
+\textcolor{blue}{$$\int_1^3\frac{1}{x-2}dx$$}
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Formulate the definition of the following improper integrals.  Choose \textbf{two} (at least one of each type) to solve fully. (Hint: at least one of these examples is both types of improper integral.)
+    \begin{enumerate}
+        \item $\int_1^4 \frac{1}{x-3}dx$\\
+        \textcolor{blue}{Formulation: 
+        $$\lim_{t\rightarrow 3^-}\int_1^t \frac{1}{x-3}dx + \lim_{s\rightarrow 3^+} \int_s^4\frac{1}{x-3}dx$$\\
+        Worked out answer: this intergral diverges\\
+        $\lim_{t\rightarrow 3^-}\int_1^t \frac{1}{x-3}dx + \lim_{s\rightarrow 3^+} \int_s^4\frac{1}{x-3}dx$\\
+        $=\lim_{t\rightarrow 3^-}\ln|x-3|\bigg|_1^t + \lim_{s\rightarrow 3^+} \ln|x-3|\bigg|_s^4$\\
+        $=\lim_{t\rightarrow 3^-} \ln|t-3|-\ln(2)+\lim_{s\rightarrow 3^+}|ln(1)-\ln|s-3|$\\
+        $=(-\infty-\ln(2))+(-\infty)$\\
+        Therefore both pieces diverge.}
+        \item $\int_3^\infty \frac{2x}{3+x^2}dx$\\
+        \textcolor{blue}{Formulation:
+        $$\lim_{t\rightarrow \infty}\int_3^t\frac{2x}{3+x^2}dx$$\\
+        Worked out answer: this integral diverges (needs $u$-sub)\\
+        Let $u=3+x^2$, $\frac{du}{dx}=2x$
+        $=\lim_{t\rightarrow \infty}\int_9^{t^2+3}\frac{1}{u}dx$\\
+        $=\lim_{t\rightarrow \infty} \ln|u|\bigg|_9^{t^2+3}$\\
+        $=\lim_{t\rightarrow \infty} \ln(t^2+3)-\ln(9)=\infty$}
+        \item $\int_0^1 x\ln(x)dx$\\
+        \textcolor{blue}{Formulation:\\
+        $$\lim_{t\rightarrow 0^+}\int_t^1 x\ln(x)dx$$
+        Worked out solution: converges to $-\frac14$.\\
+        Use integration by parts: $f(x)=\ln(x)$, $f'(x)=\frac1x$; $g'(x)=x$, $g(x)=\frac{x^2}{2}$\\
+        $=\lim_{t\rightarrow 0^+} \frac{x^2}{2}\ln(x)\bigg|_t^1 -\int_t^1 \frac{1}{x}\left(\frac{x^2}{2}\right)dx$\\
+        $=\lim_{t\rightarrow 0^+} \frac{t^2}{2}\ln(t)-\frac12 \ln(1) -\frac{x^2}{4}\bigg|_t^1$\\
+        $=\lim_{t\rightarrow 0^+} \frac{t^2}{2}\ln(t)-\frac12 \ln(1) -\frac{1}{4}+\frac{t^2}{4}$\\
+        $\lim_{t\rightarrow 0^+} \frac{t^2}{2}\ln(t)$ gives a $0\cdot -\infty$ term and needs l'Hopital's rule.\\
+        $\lim_{t\rightarrow 0^+} \frac{\ln(t)}{2t^{-2}}$ gives an $\frac{\infty}{\infty}$ form, and thus we can use l'HR.\\
+        $\lim_{t\rightarrow 0^+} \frac{\frac{1}{t}}{-4t^{-3}=\lim_{t\rightarrow 0^+}-\frac{t^2}{4}=0$\\
+        Then our original limit is $=0-0-\frac{1}{4}+0=-\frac14$
+        \item $\int_1^\infty e^{-x}dx$\\
+        \textcolor{blue}{Formulation:
+        $$\lim_{t\rightarrow \infty} \int_0^t e^{-x}dx$$
+        Worked out solution: converges to $e^{-1}$.\\
+        $\lim_{t\rightarrow \infty} \int_0^t e^{-x}dx$\\
+        $=$$\lim_{t\rightarrow \infty} -e^{-x}\bigg|_1^t=\lim_{t\rightarrow\infty} -e^{-t}+e^{-1}=\lim_{t\rightarrow \infty} -\frac1{e^t}+\frac1e=e^{-1}$}
+        \item $\int_{-\infty}^\infty \cos(2x)dx$\\
+        \textcolor{blue}{Formulation:
+        $$\lim_{t\rightarrow -\infty}\int_t^0 \cos(2x)dx+\lim_{s\rightarrow \infty} \int_0^s \cos(2x)dx$$
+        Worked out solution: this integral diverges\\
+        $\lim_{t\rightarrow -\infty}\frac{\sin(2x)}{2}\bigg|_t^0+\lim_{s\rightarrow \infty} \frac{\sin(2x)}{2}\bigg|_0^s$\\
+        $\lim_{t\rightarrow -\infty}\frac{\sin(2(0))}{2}-\frac{\sin(2t)}{2}+\lim_{s\rightarrow \infty} \frac{\sin(2s)}{2}-\frac{\sin(2(0))}{2}$ DNE\\
+}
+        \item $\int_0^\infty \frac{1}{x^2}dx$\\
+        \textcolor{blue}{Formulation:}
+        $$\lim_{t\rightarrow 0^+} \int_0^1 \frac{1}{x^2}dx+\lim_{s\rightarrow \infty}\frac{1}{x^2}dx$$
+        \textcolor{blue}{Worked out solution: Part 1 diverges by the $p$-theorem for type 2, and Part 2 converges by the $p$-theorem for type 1.  Therefore, the whole integral DIVERGES.}
+    \end{enumerate}
+\end{exercise}
+
+
+\end{document}
