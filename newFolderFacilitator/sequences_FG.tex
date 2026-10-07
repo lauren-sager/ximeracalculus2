@@ -1,0 +1,112 @@
+\documentclass{ximera}
+
+\title{Intro to Sequences Activity Facilitator Guide}
+\author{MATH 426: Calculus II}
+
+\begin{document}
+\begin{abstract}
+   Working with the peers in your group, solve the following problems. Make sure to show and justify all your work. Make sure everyone in the group understands the solution and participates. Be prepared to report your answers to the whole class. 
+\end{abstract}
+\maketitle
+
+\textbf{Student Learning Objectives}\\
+Students will be able to:
+    \begin{itemize}
+        \item List terms of sequences given an $n$th term or description.
+        \item Create an $n$th term of a sequence given a verbal description or list.
+        \item Identify and find the limit of a convergent sequence.
+        \item Use a scaffolded proof to determine the limit of a recursive sequence.
+        \item List terms of a sequence of partial sums.
+    \end{itemize}
+
+\textbf{Prerequisites:} Students should know the defintion of a sequence and convergence/divergence of a sequence, along with the varied notations for sequences. 
+
+\begin{exercise}
+ List the first five elements of each sequence.  If you think the sequence converges, give the limit.
+\begin{enumerate}
+    \item $\{a_n\}=\{\sin(n\pi)\}$\\
+    \textcolor{blue}{ $=\{\sin(\pi), \sin(2\pi), \sin(3\pi),\sin(4\pi),\sin(5\pi),...\}=\{0,0,0,0,0,...\}$\\
+    $\lim\limits_{n\rightarrow \infty}\sin(n\pi)=0$}
+    %\vspace{.5in}
+    \item $\{b_n\}=\bigg\{\dfrac{1}{n^2}\bigg\}$\\
+    \textcolor{blue}{ $=\{\frac{1}{1}, \frac14, \frac19,\frac1{16}, \frac{1}{25},..\}$\\
+    $\lim\limits_{n\rightarrow \infty} \frac{1}{n^2}=0$}
+    %\vspace{.5in}
+    \item $\{c_n\}=\{n^2+1\}$\\
+    \textcolor{blue}{ $=\{2, 5, 10, 17, 26, ...\}$\\
+    Diverges ($\lim_{n\rightarrow \infty}n^2+1=\infty$)}
+    %\vspace{.5in}
+\end{enumerate}
+
+\end{exercise}
+
+\begin{exercise}
+    Identify the sequence in each of the following, and write it both as an ordered list and an $n^{th}$ term in curly braces. If the sequence converges, state to what.\\
+    \textcolor{orange}{These will likely cause problems for some students.  Encourage students to write out the list of terms first, then to look for patterns.  If students are stuck, try to give hints or point out useful pattern characteristics, rather than giving the answer.}
+\begin{enumerate}
+      \item Start with 2.  Halve it.  Halve it again. And again and again ... \\
+    \textcolor{blue}{ $\{2, 1, \frac{1}{2}, \frac14, \frac18,\dots\}$\\
+    $\{\frac{1}{2^{n-2}}\}_{n=1}^{\infty}$\\
+    Converges to 0}
+    %\vspace{.5in}
+    \item Start with 1.  Then divide it by 2.  Then divide this value by 3.  Then divide this by 4, ... \\
+    \textcolor{blue}{ $\{1, \frac{1}{2}, \frac{1}{2\cdot 3}, \frac{1}{2\cdot 3 \cdot 4}, \frac{1}{2\cdot3\cdot4\cdot5}, \dots \}$\\
+    $\{\frac{1}{n!}\}_{n=1}^{\infty}$\\
+    Converges to 0}
+    %\vspace{.5in}
+    \item Start with 1.  Divide it by each of the natural numbers in order, but if the denominator is even, multiply it by -1.\\
+    \textcolor{blue}{ $\{1, \frac{-1}{2}, \frac13, \frac{-1}{4}, \dots \}$\\
+    $\{\frac{(-1)^n}{n}\}_{n=1}^\infty$\\
+    Converges to 0}
+    %\vspace{.5in}
+    \item Start with 0.3.  Divide by 10.  Then divide by 10 again.  And again and again ...
+    \textcolor{blue}{ $\{0.3, 0.03, 0.003, 0.0003, \dots \}$\\
+    $\{0.3(\frac{1}{10})^{n-1}\}_{n=1}^\infty=\{3(\frac{1}{10})^n\}_{n=1}^\infty$\\
+    Converges to 0}
+    %\vspace{.5in}
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+     Consider the recursive sequence $\{a_n\}$ where $a_{n+1}=\sqrt{2a_n}$ and $a_1=\sqrt{2}$. This sequence is unusual but also interesting and surprising.  This exercise will walk you through a proof that this sequence converges, and find the value which it converges to.
+\begin{enumerate}
+    \item Write out the first four terms of the sequence.
+    \vspace{.5in}
+    \item First, we want to show that $\{a_n\}$ is bounded above. Note that $a_1=\sqrt{2}\approx1.414<2$.  If $a_n<2$, show that $a_{n+1}<2$ as well.  \\
+    Fill in the blanks of the following statment:\\
+    We assume that $a_n<2$.  Then $a_{n+1}=\sqrt{2\textcolor{blue}{a_n}}<\sqrt{2\textcolor{blue}{(2)}}=2$.\\
+    (Now we can show that $a_n<2$ for any n, since $a_1<2$, so $a_2<2$ and so on. This is a proof technique called induction.)
+    \item Next, we want to show that $\{a_n\}$ is increasing.  We know from (b) that $a_n<2$ for all n.  Use this fact to show that $a_{n+1}=\sqrt{2a_n}>a_n.$\\
+    %(Hint: what happens if we create an inequality by subbing in $a_n$ in the place of 2?)
+    Fill in the blanks of the following statement:\\
+    We know that $2>a_n$, so $a_{n+1}=\sqrt{2a_n}>\sqrt{\textcolor{blue}{a_n}(a_n)}=|\textcolor{blue}{a_n}|=\textcolor{blue}{a_n}$. \\
+    This means that $\{a_n\}$ is increasing.
+    \item Increasing and bounded above are enough to know that $\{a_n\}$ converges.  In order to find the value it converges to, we'll take $$L=\sqrt{2\sqrt{2\sqrt{2\sqrt{2\dots}}}}$$  Write out $\sqrt{2L}$.  Are they the same?  If so, solve $L=\sqrt{2L}$ for $L$.  Which answer makes sense?\\
+    \textcolor{blue}{ $\sqrt{2L}=\sqrt{2\bigg(\sqrt{2\sqrt{2\sqrt{2\sqrt{2\dots}}}}\bigg)}=L$\\
+    So $\sqrt{2L}=L$, or $2L=L^2$.  Then $L^2-2L=0$\\
+    $L(L-2)=0$, so $L=0$ or $L=2$.  Since we have seen that the terms are positive, and increasing, $L$ cannot be 0, so $L=2$.}\\
+    \textcolor{orange}{Many students may not see the point of this exercise.  This is an attempt to show them some of the more interesting underpinnings of sequences that are not defined simply by $f(n)=a_n$, and thus is complicated.  The scaffolded proof should make it somewhat accessible to everyone.}
+\end{enumerate}
+
+\end{exercise}
+
+\begin{exercise}
+    Our next topic in this course will be series, which are \textit{sums} of infinitely many terms.  Consider the series that sums the reciprocal of the squares of integers, i.e. the sum from 1 to $\infty$ of all numbers of the form $\frac{1}{n^2}$.
+    \begin{enumerate}
+        \item List the first six terms of the \textit{sequence} $\{a_n\}=\{\frac{1}{n^2}\}$.\\
+        \textcolor{blue}{$a_1=\frac{1}{1}=1$, $a_2=frac14$, $a_3=\frac19$, $a_4=\frac1{16}$, $a_5=\frac1{25}$, $a_6=\frac{1}{36}$}
+        \item In this case, the sequence of partial sums is the list of terms given by $S_n=\frac{1}{1}+\frac{1}{2^2}+\dots +\frac{1}{n^2}$. List the first four terms of $\{S_n\}$, the sequence of partial sums.\\
+        \textcolor{blue}{$S_1=\frac{1}{1}=1$\\
+        $S_2=1+\frac14=1.25$\\
+        $S_3=1+\frac14+\frac19\approx 1.3611$
+        $S_4=1+\frac14+\frac19+\frac1{16}\approx 1.42361$}
+        \item Do you have any guess to what value the sequence of partial sums may converge to, or do you think it diverges?  (More to come on this in lecture!)\\
+        \textcolor{blue}{We don't have a great reason to believe that it will converge, but it looks like it goes towards 1.5ish?  It actually converges to $\frac{\pi^2}{6}$}
+    \end{enumerate}
+    \textcolor{orange}{We have not yet covered anything with series or partial sums, so this is new to students.  The goal is just to introduce the idea of a sequence of partial sums to make it easier to understand in lecture.}
+\end{exercise}
+
+
+
+
+\end{document}
